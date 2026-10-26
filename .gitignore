@@ -1,5 +1,5 @@
 # Olist raw datasets
-/data/raw/*.csv
+#/data/raw/*.csv
 
 # Generated datasets
 /data/processed/
