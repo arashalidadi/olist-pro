@@ -1,0 +1,11 @@
+# Normalize line endings for text files
+* text=auto
+
+# Force LF for source files
+*.py text eol=lf
+*.ipynb text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+
+# Windows batch files need CRLF
+*.bat text eol=crlf
