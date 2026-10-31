@@ -5,6 +5,9 @@
 /data/processed/
 /data/interim/
 
+# Generated charts (notebook renders charts inline; scripts save them locally)
+/charts/
+
 # Python environment
 .venv/
 venv/
