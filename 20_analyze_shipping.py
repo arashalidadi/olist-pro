@@ -1,5 +1,6 @@
 import os
 import sys
+import re
 
 import arabic_reshaper
 import matplotlib.pyplot as plt
@@ -13,8 +14,21 @@ plt.rcParams['font.family'] = ['DejaVu Sans', 'Tahoma']
 
 
 def fa(text):
-    reshaped = arabic_reshaper.reshape(str(text))
-    return get_display(reshaped)[::-1]
+    text = str(text)
+
+    # تقسیم متن به بخش‌های فارسی و غیرفارسی
+    parts = re.split(r'([\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF]+)', text)
+
+    result = []
+
+    for part in parts:
+        if re.search(r'[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF]', part):
+            reshaped = arabic_reshaper.reshape(part)
+            result.append(get_display(reshaped)[::-1])
+        else:
+            result.append(part)
+
+    return ''.join(result)
 
 
 os.makedirs('charts', exist_ok=True)
