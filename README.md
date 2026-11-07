@@ -2,14 +2,15 @@
 
 ## ساختار فایل‌ها
 
+- `project_requirements.md`: شرح پروژه
 - `olist_analysis.ipynb`: تحلیل داده‌ها
 - `olist_management_report.pdf`: گزارش مدیریتی
-- `data/raw/`: داده‌های خام
+- `Olist-data/`: داده‌های خام
 - `.gitignore`: فایل‌های نادیده‌گرفته‌شده در گیت
 
 ## داده‌ها
 
-فایل‌های زیر با همین نام‌ها در پوشه `data/raw/` قرار می‌گیرند:
+فایل‌های زیر با همین نام‌ها در پوشه `Olist-data/` قرار می‌گیرند:
 
 ```text
 olist_orders_dataset.csv
