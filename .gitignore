@@ -1,16 +1,11 @@
-# Olist raw datasets
-#/data/raw/*.csv
-
-# Generated datasets
-/data/processed/
-/data/interim/
-
-# Python environment
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
 .venv/
 venv/
-__pycache__/
-.ipynb_checkpoints/
-
-# Temporary files
+.env
 *.tmp
 *.log
+.DS_Store
+
+/Olist-data/
